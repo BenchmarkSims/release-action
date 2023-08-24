@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: cache go path
         id: cache-go-path
-        uses: https://github.com/actions/cache@v3
+        uses: actions/cache@v3
         with:
           path: /go_path
           key: go_path-${{ github.repository }}-${{ github.ref_name }}
@@ -24,7 +24,7 @@ jobs:
             go_path-                                                
       - name: cache go cache
         id: cache-go-cache
-        uses: https://github.com/actions/cache@v3
+        uses: actions/cache@v3
         with:
           path: /go_cache
           key: go_cache-${{ github.repository }}-${{ github.ref_name }}
